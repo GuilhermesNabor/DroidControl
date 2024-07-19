@@ -1,5 +1,7 @@
 # DroidControl
-<img src="assets/DroidControl.png">
+<div align="center">
+    <img src="assets/DroidControl.png">
+</div>
 O DroidControl é uma aplicação que permite controlar dispositivos Android por meio da porta TCP/IP 5555. Essa porta é comumente associada ao recurso ADB (Android Debug Bridge), que permite a comunicação entre um computador e um dispositivo Android para debug, instalação de aplicativos e outras tarefas de desenvolvimento.
 <br><br>
 O DroidControl oferece uma interface simples e intuitiva para interagir com dispositivos Android conectados à internet, seja em rede local ou externa. Ele permite que os usuários utilizem 10 opções funcionais para o dispositivo, como captura de tela, reiniciar dispositivo, abrir URL e muito mais, tudo por meio da conexão TCP/IP 5555.
