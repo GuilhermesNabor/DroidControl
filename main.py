@@ -1,21 +1,15 @@
-from tools.menu import Menu
-from tools.network_scanner import NetworkScanner
+from src.ui.menu import Menu
+from src.utils.logger import logger
 
-class Main:
-    @staticmethod
-    def main():
+def main():
+    """Application entry point."""
+    try:
         menu = Menu()
-        while True:
-            var1 = input("\nDo you want to scan the network? Enter 'Y' or 'N': ").upper()
-
-            if var1 == "N":
-                ip = input("\nEnter the IP address: ")
-                if menu.adb_manager.conectar_dispositivo(ip):
-                    menu.menu_opcoes()
-            elif var1 == "Y":
-                NetworkScanner.scan_rede()
-            else:
-                print("\nInvalid option. Please choose 'Y' or 'N'.")
+        menu.display_main_menu()
+    except KeyboardInterrupt:
+        print("\n\nOperation cancelled by user. Goodbye!")
+    except Exception as e:
+        logger.critical(f"Unhandled exception in main loop: {e}")
 
 if __name__ == "__main__":
-    Main.main()
+    main()
